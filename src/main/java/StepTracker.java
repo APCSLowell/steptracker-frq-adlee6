@@ -13,20 +13,20 @@ public class StepTracker
   active = 0;
  }
 
- public addDailySteps(int num) {
+ public void addDailySteps(int num) {
   steps += num;
   days++;
   if(num >= min)
     active++;
  }
 
- public int activeDays(){
+ public int activeDays() {
   return active;
  }
 
  public double averageSteps() {
   if(days == 0)
-    return 0;
+    return 0.0;
   else
     return (double)steps/days;
  }
